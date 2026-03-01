@@ -12,3 +12,7 @@ Student:
 Suttidech Jittawisuttikul
 Ph.D Candidate
 Mae Fah Luang University
+
+
+
+This is the first project that I created by using Copilot for helping my software developing scale up. Please feel free to give me advices or comments.
