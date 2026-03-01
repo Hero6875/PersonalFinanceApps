@@ -1,0 +1,98 @@
+.card {
+    background: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.upcoming-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    margin-bottom: 6px;
+    border-radius: 8px;
+}
+
+/* STATUS COLORS */
+
+.overdue {
+    background-color: #ffdddd;
+    border-left: 6px solid red;
+}
+
+.due-soon {
+    background-color: #ffe6cc;
+    border-left: 6px solid orange;
+}
+
+.this-week {
+    background-color: #fff4cc;
+    border-left: 6px solid gold;
+}
+
+.later {
+    background-color: #e8f5e9;
+    border-left: 6px solid green;
+}
+
+.flag {
+    font-weight: bold;
+}
+.filter-bar {
+    margin-bottom: 10px;
+}
+
+.filter-bar button {
+    margin-right: 5px;
+    padding: 6px 10px;
+    cursor: pointer;
+}
+.monthly-item {
+    display:flex;
+    justify-content:space-between;
+    padding:10px;
+    border-bottom:1px solid #eee;
+}
+/* payment card */
+.payment-card {
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  border:1px solid #e6e6e6;
+  padding:12px;
+  border-radius:8px;
+  margin-bottom:8px;
+  background:#fff;
+  transition:background 0.3s ease, transform 0.15s ease;
+}
+.payment-card.overdue { background:#fff0f0; border-color:#ffcccc; }
+.payment-card.paid { background:#f6ffed; border-color:#d9f7be; }
+.payment-card .pc-left { width:70%; }
+.payment-card .pc-right { width:28%; text-align:right; }
+
+.pay-btn { padding:6px 10px; cursor:pointer; }
+.pay-btn[disabled] { opacity:0.6; cursor:default; }
+
+.progress-wrapper { margin-top:8px; }
+.progress-bar { width:100%; height:10px; background:#f0f0f0; border-radius:6px; overflow:hidden; }
+.progress-fill { height:100%; background:#52c41a; width:0%; transition:width .5s ease; }
+.progress-text { display:block; margin-top:6px; color:#666; font-size:12px; }
+
+/* loading btn */
+.loading-btn { opacity:0.6; pointer-events:none; }
+
+/* spinner */
+.spinner {
+  border:3px solid #eee;
+  border-top:3px solid #1890ff;
+  border-radius:50%;
+  width:14px; height:14px;
+  display:inline-block; animation:spin .8s linear infinite;
+}
+@keyframes spin { 100%{ transform:rotate(360deg) } }
+
+/* small success animation */
+.paid-success { transform:scale(1.01); box-shadow:0 6px 20px rgba(0,0,0,0.06); }
+.paid-badge { color:#389e0d; font-weight:600; }
+
+

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <nav class="navbar navbar-dark bg-dark">
+    <div class="container-fluid">
+      <span class="navbar-brand">
+        Finance Management System
+      </span>
+    </div>
+  </nav>
+
+  <div class="container-fluid">
+    <div class="row">
+
+      <!-- Sidebar -->
+      <div class="col-2 bg-light vh-100 p-3">
+
+        <ul class="nav flex-column">
+          <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+          <li><a href="#" class="nav-link active">Master Category</a></li>
+        </ul>
+
+      </div>
+
+      <!-- Content -->
+      <div class="col-10 p-4">
+
+        <h3>Category Master Data</h3>
+
+        <button class="btn btn-primary mb-3" onclick="openAddModal()">
+          + Add Category
+        </button>
+
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Name</th>
+              <th width="200">Action</th>
+            </tr>
+          </thead>
+
+          <tbody id="categoryTable"></tbody>
+        </table>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- MODAL -->
+  <div class="modal fade" id="categoryModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+
+        <div class="modal-header">
+          <h5 class="modal-title">Category</h5>
+          <button class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+
+        <div class="modal-body">
+
+          <input type="hidden" id="categoryId">
+
+          <label>Name</label>
+          <input type="text" id="categoryName" class="form-control">
+
+        </div>
+
+        <div class="modal-footer">
+
+          <button class="btn btn-secondary" data-bs-dismiss="modal">
+            Cancel
+          </button>
+
+          <button class="btn btn-success" onclick="saveCategory()">
+            Save
+          </button>
+
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script src="js/api.js"></script>
+  <script src="js/master-category.js"></script>
+
+</body>
+
+</html>
